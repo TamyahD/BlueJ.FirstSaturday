@@ -1,6 +1,7 @@
 
 
 import static org.junit.Assert.*;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,44 +9,39 @@ import org.junit.Test;
 /**
  * The test class WriteIFsTest.
  *
- * @author  kyounger
+ * @author kyounger
  * @version 1.3
  */
-public class WriteIFsTest
-{
+public class WriteIFsTest {
     private static final double _0_5 = 0.5;
     private static final double _0_04 = 0.04;
 
     /**
      * Default constructor for test class WriteIFsTest
      */
-    public WriteIFsTest()
-    {
+    public WriteIFsTest() {
     }
 
     /**
      * Sets up the test fixture.
-     *
+     * <p>
      * Called before every test case method.
      */
     @Before
-    public void setUp()
-    {
+    public void setUp() {
     }
 
     /**
      * Tears down the test fixture.
-     *
+     * <p>
      * Called after every test case method.
      */
     @After
-    public void tearDown()
-    {
+    public void tearDown() {
     }
 
     @Test
-    public void TestIfs()
-    {
+    public void TestIfs() {
         WriteIFs writeIFs1 = new WriteIFs();
         writeIFs1.playerDied(true);
         assertEquals("Game Over!", writeIFs1.ss);
@@ -53,43 +49,42 @@ public class WriteIFsTest
 
 
     @Test
-    public void TestTherm()
-    {
+    public void TestTherm() {
         WriteIFs writeIFs1 = new WriteIFs();
         assertEquals("heating", writeIFs1.thermoSTAT(62));
     }
+
     @Test
-    public void TestTherm1()
-    {
+    public void TestTherm1() {
         WriteIFs writeIFs1 = new WriteIFs();
         assertEquals("cooling", writeIFs1.thermoSTAT(81));
     }
+
     @Test
-    public void TestCheckFuel1()
-    {
+    public void TestCheckFuel1() {
         WriteIFs writeIFs1 = new WriteIFs();
         writeIFs1.checkFuel(_0_5);
         assertEquals(0, writeIFs1.x);
     }
+
     @Test
-    public void TestCheckFuel2()
-    {
+    public void TestCheckFuel2() {
         WriteIFs writeIFs1 = new WriteIFs();
         writeIFs1.checkFuel(_0_04);
         assertEquals(99, writeIFs1.x);
     }
+
     @Test
-    public void TestFireControl()
-    {
+    public void TestFireControl() {
         WriteIFs writeIFs1 = new WriteIFs();
         Object oo = new Object();
         writeIFs1.tt_s = 1;
         writeIFs1.fireplaceControl(oo);
         assertEquals(213, writeIFs1.tt_s);
     }
+
     @Test
-    public void TestFireControl2()
-    {
+    public void TestFireControl2() {
         WriteIFs writeIFs1 = new WriteIFs();
         Object oo = new Object();
         writeIFs1.oo1 = 65;
@@ -97,9 +92,9 @@ public class WriteIFsTest
         writeIFs1.fireplaceControl(oo);
         assertEquals(1, writeIFs1.tt_s);
     }
+
     @Test
-    public void TestFireControl3()
-    {
+    public void TestFireControl3() {
         WriteIFs writeIFs1 = new WriteIFs();
         Object oo = new Object();
         writeIFs1.oo2 = 80;
